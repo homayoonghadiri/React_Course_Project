@@ -1,39 +1,12 @@
-import ClassComponent from "./ClassComponent";
-import FunctionalComponent from "./FunctionalComponent";
+import User from "./User";
 
 const App = () => {
-
-    // const variable_1 = 10;
 
     return (
 
     <>
-        {/* <div>Hello my friend</div>
-        <div>
-            <div className='section_1'>
-                <span style={
-                    {
-                        backgroundColor: 'red',
-                        fontSize: '20px',
-                        color: '#fff',
-                        padding: 10, // px
-                        margin: '120px',
-                        cursor: 'pointer'
-                    }
-                }>Button span</span>
-                <span>{variable_1}</span>
-            </div>
-
-
-            <div className='section_2'>
-                <p>Hello my friend</p>
-                <img src="" alt="" />
-                <input type="text" />
-            </div>
-        </div> */}
-        
-        <FunctionalComponent />
-        <ClassComponent />
+        <User id="5112" fullName="Ahmad Bagheri" email="ahmad@gmail.com" phone="09124567921" city="Tehran" address="Tajrish, No.28" />
+        <User id="5113" fullName="Farhad Rahimi" email="farhad@outlook.com" phone="09359050995" city="Shiraz" address="Hafez street, No.99" />
     </>
 
 
