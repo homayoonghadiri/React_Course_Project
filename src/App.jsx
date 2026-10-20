@@ -3,12 +3,12 @@ import FunctionalComponent from "./FunctionalComponent";
 
 const App = () => {
 
-    const variable_1 = 10;
+    // const variable_1 = 10;
 
     return (
 
     <>
-        <div>Hello my friend</div>
+        {/* <div>Hello my friend</div>
         <div>
             <div className='section_1'>
                 <span style={
@@ -30,7 +30,7 @@ const App = () => {
                 <img src="" alt="" />
                 <input type="text" />
             </div>
-        </div>
+        </div> */}
         
         <FunctionalComponent />
         <ClassComponent />
