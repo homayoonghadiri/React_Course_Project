@@ -14,7 +14,8 @@ export default defineConfig([
       reactRefresh.configs.vite,
     ],
     rules: {
-      // 'no-unused-vars': 'warn'
+      // 'no-unused-vars': 'warn',
+      'react/prop-types': 'off'
     },
     languageOptions: {
       globals: globals.browser,

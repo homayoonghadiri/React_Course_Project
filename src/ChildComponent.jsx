@@ -10,3 +10,8 @@ const ChildComponent = ({text}) => {
 };
 
 export default ChildComponent;
+
+
+// ChildComponent.propTypes = {
+//     text: propTypes.string.isRequired
+// };
