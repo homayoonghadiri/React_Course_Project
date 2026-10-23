@@ -21,7 +21,14 @@ const App = () => {
 
             <button onClick={changeText1}>Click me</button>
             <button onClick={changeText2}>Click me</button>
-            <ChildComponent text={text} />
+            <ChildComponent text={text}>
+                <p>children line 1</p>
+                <p>children line 2</p>
+                <p>children line 3</p>
+                {123456}<br/>
+                <span>test</span><br/>
+                {['index1', 'index2', 'index3']}
+            </ChildComponent>
         </>
     );
 
