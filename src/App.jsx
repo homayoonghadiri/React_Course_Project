@@ -1,37 +1,25 @@
-import { useState } from "react";
 import User from "./User";
-import ChildComponent from "./ChildComponent";
 
 
 const App = () => {
 
-    const [text, setText] = useState('Hello');
-    const changeText1 = () => {
-        setText('Mr Mostofi');
-        console.log(text);
-    }
-    const changeText2 = () => {
-        setText('Miss Rostami');
-    }
+    const users = [
+        { id: 5112, fullName: "Ahmad Bagheri", email: "ahmad@gmail.com", phone: 9124567921, city: "Tehran", address: "Tajrish, No.28" },
+        { id: 5113, fullName: "Farhad Rahimi", email: "farhad@outlook.com", phone: 9359050995, city: "Shiraz", address: "Hafez street, No.99" },
+        { id: 5114, fullName: "Sina Soheili", email: "Sina@yahoo.com", phone: 9386525200, city: "Tabriz", address: "Azadi street, No.10" },
+        { id: 5115, fullName: "Mina Moslemi", email: "Mina@gmail.com", phone: 9223399529, city: "Esfahan", address: "Dastgerdi street, No.1" },
+        { id: 5116, fullName: "Sahar Ahmadpoor", email: "Sahar@hotmail.com", phone: 9195160040, city: "Abadan", address: "Toghrol street, No.125" }
+    ];
 
     return (
         <>
-            <User id="5112" fullName="Ahmad Bagheri" email="ahmad@gmail.com" phone="09124567921" city="Tehran" address="Tajrish, No.28" />
-            <User id="5113" fullName="Farhad Rahimi" email="farhad@outlook.com" phone="09359050995" city="Shiraz" address="Hafez street, No.99" />
-
-            <button onClick={changeText1}>Click me</button>
-            <button onClick={changeText2}>Click me</button>
-            <ChildComponent text={text}>
-                <p>children line 1</p>
-                <p>children line 2</p>
-                <p>children line 3</p>
-                {123456}<br/>
-                <span>test</span><br/>
-                {['index1', 'index2', 'index3']}
-            </ChildComponent>
+            {
+                users.map((user) => (
+                    <User key={user.id} id={user.id} fullName={user.fullName} email={user.email} phone={user.phone} city={user.city} address={user.address}  />
+                ))
+            }
         </>
     );
-
 };
 
 export default App;
