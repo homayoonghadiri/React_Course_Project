@@ -13,7 +13,6 @@ const User = ({id, fullName, email, phone, address, city, handleDelete}) => {
                <li><strong>City: </strong>{city}</li> 
                <li><strong>Address: </strong>{address}</li>
                <li style={{'listStyle': 'none', 'marginTop': 5}}>
-                    {/* {showUser && <User />} */}
                     <button className="btn-del" onClick={() => handleDelete(id)}>Delete</button>
                </li>
             </ul>
