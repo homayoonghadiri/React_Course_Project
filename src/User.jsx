@@ -1,5 +1,3 @@
-// import { useState } from "react";
-
 const User = ({id, fullName, email, phone, address, city, handleDelete}) => {
 
     return (
