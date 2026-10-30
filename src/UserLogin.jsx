@@ -5,29 +5,33 @@ const UserLogin = () => {
     const [age, setAge] = useState(20);
     const [email, setEmail] = useState('h02ghadiri@gmail.com');
     const [newEmail, setNewEmail] = useState('');
-    const isFirstRender = useRef(true);
+    let isFirstRender = useRef(true);
 
     function changeEmail() {
         if(newEmail.trim() !== ''){
             setEmail(newEmail);
             setNewEmail('');
         }
-    } 
+    }
     
     useEffect(() => {
         // mount
         console.log('Send a request to the server');
-        
+
+        const handleClick = () => {
+            console.log('My name is Homayoon');
+        }
+        const name = document.getElementsByTagName('li')[0];
+        name?.addEventListener('click', handleClick);
 
         return () => {
             // unmount
             console.log('Hope to meet you');
+            name?.removeEventListener('click', handleClick);
         }
     }, [])
 
     useEffect(() => {
-        // console.log(age);
-
         if (age === 34) {
             console.log('*** My age is 34 ***');
         }
