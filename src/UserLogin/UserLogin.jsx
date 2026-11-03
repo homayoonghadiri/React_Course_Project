@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import "./UserLogin.css";
+import styles from "./UserLogin.module.css";
 
 const UserLogin = () => {
     
@@ -50,17 +50,17 @@ const UserLogin = () => {
 
     return (
         <>
-            <h1 className="title-login">Login User</h1>
-            <button className="btn-change" onClick={() => setAge(prevAge => prevAge + 1)}>
+            <h1 className={styles['title-login']}>Login User</h1>
+            <button className={styles['btn-change']} onClick={() => setAge(prevAge => prevAge + 1)}>
                 Change Age
             </button>
             <br />
-            <button id="btnChangeEmail" className="btn-change" onClick={changeEmail}>Change Email</button>
-            <input className="email" type="text" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} />
-            <ul className="list-info">
-                <li className="list-info-item">Name: Homayoon</li>
-                <li className="list-info-item">Age: <span>{age}</span></li>
-                <li className="list-info-item">Email: <span>{email}</span></li>
+            <button id="btnChangeEmail" className={styles['btn-change']} onClick={changeEmail}>Change Email</button>
+            <input className={styles.email} type="text" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} />
+            <ul className={styles['list-info']}>
+                <li className={styles['list-info-item']}>Name: Homayoon</li>
+                <li className={styles['list-info-item']}>Age: <span>{age}</span></li>
+                <li className={styles['list-info-item']}>Email: <span>{email}</span></li>
             </ul>
         </>
     );

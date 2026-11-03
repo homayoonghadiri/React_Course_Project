@@ -55,6 +55,8 @@ input.email {
     color: var(--icyDark-color);
     font-size: var(--font-size-lg);
     margin-right: var(--spacing-xs);
+    position: relative;
+    top: 2px;
 }
 
 .list-info-item span {
