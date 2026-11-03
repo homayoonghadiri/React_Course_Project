@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import "./UserLogin.css";
 
 const UserLogin = () => {
     
@@ -49,17 +50,17 @@ const UserLogin = () => {
 
     return (
         <>
-            <h1>Login User</h1>
-            <button onClick={() => setAge(prevAge => prevAge + 1)}>
-                Change age
+            <h1 className="title-login">Login User</h1>
+            <button className="btn-change" onClick={() => setAge(prevAge => prevAge + 1)}>
+                Change Age
             </button>
-            <br /><br />
-            <button id="btnChangeEmail" onClick={changeEmail}>Change email</button>
-            <input type="text" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} />
-            <ul>
-                <li>Name: Homayoon</li>
-                <li>Age: {age}</li>
-                <li>Email: {email}</li>
+            <br />
+            <button id="btnChangeEmail" className="btn-change" onClick={changeEmail}>Change Email</button>
+            <input className="email" type="text" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} />
+            <ul className="list-info">
+                <li className="list-info-item">Name: Homayoon</li>
+                <li className="list-info-item">Age: <span>{age}</span></li>
+                <li className="list-info-item">Email: <span>{email}</span></li>
             </ul>
         </>
     );

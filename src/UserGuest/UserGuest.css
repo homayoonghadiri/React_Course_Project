@@ -1,0 +1,29 @@
+.title-guest {
+    font-size: var(--font-size-lg);
+    color: var(--icyDark-color);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.title-guest::after {
+    content: '';
+    width: 15%;
+    height: 1px;
+    display: block;
+    background-color: var(--icyDark-color);
+    margin: 6px auto 0;
+}
+
+.subtitle-guest {
+    font-size: var(--font-size-md);
+    text-align: center;
+    background-color: var(--icySmoke-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-low);
+}
+
+.subtitle-guest span {
+    position: relative;
+    top: 2px;
+    color: var(--complementary-color);
+}

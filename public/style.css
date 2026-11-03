@@ -1,0 +1,33 @@
+:root {
+    /* colors */
+    --light-color: white;
+    --dark-color: black;
+    --icy-color: azure;
+    --icySmoke-color: #d6ecec;
+    --icyDark-color: darkcyan;
+    --complementary-color: #ff5b5b;
+
+    /* font-size */
+    --font-size-sm: 15px;
+    --font-size-md: 18px;
+    --font-size-lg: 25px;
+
+    /* spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 14px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
+
+    /* border-radius */
+    --border-radius-low: 8px;
+    --border-radius-high: 12px;
+    --border-radius-full: 100%;
+
+    /* box-shadow */
+    --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+body {
+    background-color: var(--icy-color);
+}
