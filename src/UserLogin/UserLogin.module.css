@@ -36,6 +36,10 @@ input.email {
     font-size: var(--font-size-sm);
 }
 
+input.email:focus {
+    background-color: var(--icy-color);
+}
+
 .list-info {
     list-style: none;
     padding: 0;

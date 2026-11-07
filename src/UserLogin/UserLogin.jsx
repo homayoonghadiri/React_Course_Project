@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./UserLogin.module.css";
+import { Modal, Button } from 'react-bootstrap';
 
 const UserLogin = () => {
     
     const [age, setAge] = useState(20);
     const [email, setEmail] = useState('h02ghadiri@gmail.com');
     const [newEmail, setNewEmail] = useState('');
+    const [show, setShow] = useState(false);
     let isFirstRender = useRef(true);
 
     function changeEmail() {
@@ -33,8 +35,11 @@ const UserLogin = () => {
     }, [])
 
     useEffect(() => {
-        if (age === 34) {
-            console.log('*** My age is 34 ***');
+        const accountAge = document.getElementById('accountAge');
+        
+        if (age === 35) {
+            console.log('*** My age is 35 ***');
+            accountAge.innerHTML = `You are ${age} years old.`;
         }
     }, [age])
 
@@ -51,7 +56,17 @@ const UserLogin = () => {
     return (
         <>
             <h1 className={styles['title-login']}>Login User</h1>
-            <button className={styles['btn-change']} onClick={() => setAge(prevAge => prevAge + 1)}>
+            <button className={styles['btn-change']} onClick={() => {
+                    setAge(prevAge => {
+                        const newAge = prevAge + 1;
+                        if (newAge === 35) {
+                            setShow(true);
+                        }
+
+                        return newAge;
+                    })
+                }
+            }>
                 Change Age
             </button>
             <br />
@@ -62,6 +77,20 @@ const UserLogin = () => {
                 <li className={styles['list-info-item']}>Age: <span>{age}</span></li>
                 <li className={styles['list-info-item']}>Email: <span>{email}</span></li>
             </ul>
+
+            <Modal show={show} onHide={() => setShow(false)}>
+                <Modal.Header closeButton>
+                <Modal.Title style={{color: 'var(--icyDark-color)'}}>User Age</Modal.Title>
+                </Modal.Header>
+
+                <Modal.Body>
+                <p id="accountAge">** Your Age **</p>
+                </Modal.Body>
+
+                <Modal.Footer>
+                <Button variant="primary" onClick={() => setShow(false)}>Close</Button>
+                </Modal.Footer>
+            </Modal>
         </>
     );
 
