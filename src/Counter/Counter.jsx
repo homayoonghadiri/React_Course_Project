@@ -61,9 +61,6 @@ const Counter = () => {
                     )}
                 </Col>
             </Row>
-            {/* <Row className="justify-content-center align-items-center vh-20">
-                
-            </Row> */}
         </Container>
     );
 
